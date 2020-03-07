@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono&display=swap");
+
+:root {
+  --base0: #2b3235;
+  --base1: #394246;
+  --base2: #495659;
+  --base3: #c7c5bb;
+  --base4: #e1dfda;
+  --base5: #fcfcfc;
+  --red: #ff4b42;
+  --orange: #ff831e;
+  --yellow: #efbb00;
+  --lime: #7ac600;
+  --green: #00c609;
+  --teal: #0bb792;
+  --cyan: #00aeb7;
+  --blue: #3d94ff;
+  --indigo: #757cff;
+  --purple: #ad6bff;
+  --magenta: #f542ff;
+  --pink: #ff32a3;
+
+  --background: var(--base0);
+  --foreground: var(--base5);
+  --codebg: var(--base1);
+  --codefg: var(--base4);
+  --accent: var(--base3);
+  --lowlight: var(--base3);
+
+  --mask: var(--purple);
+  --milk: var(--blue);
+  --mold: var(--yellow);
+  --vx: var(--teal);
+  --xcl: var(--pink);
+  --xtfc: var(--orange);
+}
+
+#mask,
+.mask {
+  --accent: var(--mask);
+}
+#milk,
+.milk {
+  --accent: var(--milk);
+}
+#mold,
+.mold {
+  --accent: var(--mold);
+}
+#vx,
+.vx {
+  --accent: var(--vx);
+}
+#xcl,
+.xcl {
+  --accent: var(--xcl);
+}
+#xtfc,
+.xtfc {
+  --accent: var(--xtfc);
+}
+
+html {
+  font-family: "Fira Mono", monospace;
+  font-size: 11pt;
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+body {
+  width: 42em;
+  padding: 1em;
+  margin: 0 auto;
+  text-transform: lowercase;
+}
+
+@media (max-width: 44em) {
+  body {
+    width: 32em;
+  }
+}
+
+@media (max-width: 34em) {
+  body {
+    width: 22em;
+  }
+}
+
+a {
+  color: var(--accent);
+}
+
+header a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--foreground);
+}
+
+ul {
+  list-style: none;
+  margin: 1em 0;
+  padding-left: 1em;
+}
+
+ul li::before {
+  content: "*";
+  color: var(--accent);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+header {
+  color: var(--accent);
+  font-size: 2em;
+  border-width: 0 0 4px 0;
+  border-style: solid;
+}
+
+section {
+  margin: 2em 0;
+}
+
+section > header {
+  font-size: 1.5em;
+  border-bottom: 3px;
+  border-style: solid;
+}
+
+section > section > header {
+  font-size: 1.2em;
+  border-bottom: 1px;
+  border-style: solid;
+}
+
+section > section > section > header {
+  font-size: 1em;
+  border: none;
+}
+
+strong {
+  font-weight: normal;
+  color: var(--accent);
+}
+
+code {
+  color: var(--accent);
+}
+
+pre code {
+  color: var(--codefg);
+}
+
+#getmold {
+  text-align: center;
+}
+
+pre {
+  text-align: left;
+  display: inline-block;
+  margin: 1.5em auto;
+  width: wrap-content;
+  margin: 0 auto;
+  padding: 0.5em;
+  background-color: var(--codebg);
+}
+
+.byline {
+  color: var(--lowlight);
+}
+
+.byline a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.byline a:hover {
+  color: var(--xtfc);
+}

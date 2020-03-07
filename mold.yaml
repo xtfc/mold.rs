@@ -1,0 +1,11 @@
+recipes:
+  fmt:
+    help: "Run prettier"
+    command:
+      - "prettier"
+      - "--print-width=88"
+      - "--write"
+      - "main.css"
+      - "index.html"
+      - "mold.html"
+      - "mold.yaml"
